@@ -68,8 +68,29 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer) {
     })
     .then((response) => {
       directionsRenderer.setDirections(response);
+
+      let result = calcValue(response.routes[0].legs[0].distance.value, response.routes[0].legs[0].duration.value);
+
       document.getElementById("distancia").innerHTML = response.routes[0].legs[0].distance.text
       document.getElementById("tempo").innerHTML = response.routes[0].legs[0].duration.text
+      document.getElementById("valor").innerHTML = result
     })
     .catch((e) => window.alert("Directions request failed due to " + status));
+}
+
+
+function calcValue(distance, duration){
+
+ 
+  let distanceValue = distance / 1000;
+  let durationValue = duration / 3600;
+  let bandeirada = parseFloat("5.50");
+  let tempoPercurso = parseFloat("30.00");
+  let km_band1 = parseFloat("3.50");
+  let km_band2 = parseFloat("4.20");
+
+  var bandeira = $('input[name=band]:checked').val() == "band1" ? km_band1 : km_band2
+
+  return (bandeirada + distanceValue * bandeira + (durationValue / 3) * tempoPercurso).toFixed(2);
+
 }
