@@ -5,82 +5,79 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-  <head>
-    <title>Taxi Jundiai Anhagabaú</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="icon" href="./images/taxi-icon.ico" type="image/icon type" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <noscript>
-      <link rel="stylesheet" href="assets/css/noscript.css" />
-    </noscript>
-    <script src="./assets/js/maps.js"></script>
-  </head>
-  <body class="is-preload">
-    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+<head>
+	<title>Taxi Jundiai Anhagabaú</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="icon" href="./images/taxi-icon.ico" type="image/icon type" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!-- Header -->
-    <header id="header">
-      <div class="content">
-        <h1><a href="#">Taxi Jundiaí Anhagabaú</a></h1>
-        <div><img src="images/taxi-main.png" alt="desenho de taxi" /></div>
-        <p>
-          Viage com segurança!<br />
-          <!-- template brought to you by <a href="http://html5up.net">HTML5 UP</a></p> -->
-          <!-- <ul class="actions">
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+	<script src="./assets/js/maps.js"></script>
+</head>
+
+<body class="is-preload">
+	<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+
+	<!-- Header -->
+	<header id="header">
+		<div class="content">
+			<h1><a href="#">Taxi Jundiaí Anhagabaú</a></h1>
+			<div><img src="images/taxi-main.png" alt="desenho de taxi" /></div>
+			<p>
+				Viage com segurança!<br />
+				<!-- template brought to you by <a href="http://html5up.net">HTML5 UP</a></p> -->
+				<!-- <ul class="actions">
       						<li><a href="#" class="button primary icon solid fa-download"></a></li>
       						<li><a href="#one" class="button icon solid fa-chevron-down scrolly"></a></li>
       					</ul> -->
-        </p>
-      </div>
+			</p>
+		</div>
 
-      <div class="image phone">
-        <div class="inner"><img src="images/screen.jpg" alt="" /></div>
-      </div>
-      <!-- <div>
+		<div class="image phone">
+			<div class="inner"><img src="images/screen.jpg" alt="" /></div>
+		</div>
+		<!-- <div>
 
       			<img src="images/xadrez2.png" alt="xadrez" style="height: 50px;"/>
       		</div> -->
-    </header>
+	</header>
 
-    <!-- One -->
-    <section id="one" class="wrapper style2 special">
-      <header class="major">
-        <h2>Simulação de valores</h2>
-      </header>
-      <div>
-        <label for="origem">Origem</label>
-        <input
-          type="text"
-          id="start"
-          class="controls"
-          name="origem"
-          placeholder="Origem"
-        />
+	<!-- One -->
+	<section id="one" class="wrapper style2 special">
+		<header class="major">
+			<h2>Simulação de valores</h2>
+		</header>
+		<div>
+			<label for="origem">Origem</label>
+			<input type="text" id="start" class="controls" name="origem" placeholder="Origem" />
 
-        <label for="destino">Destino</label>
-        <input
-          id="end"
-          class="controls"
-          type="text"
-          name="destino"
-          placeholder="Destino"
-        />
-        <button id="calcular"></button>
-      </div>
-      <div id="map" style="width: 900px; height: 900px"></div>
-      <div>
-        Distancia:
-        <div id="distancia"></div>
-        Tempo:
-        <div id="tempo"></div>
-      </div>
-      <!--
+			<label for="destino">Destino</label>
+			<input id="end" class="controls" type="text" name="destino" placeholder="Destino" />
+			<div style="padding-top: 10px;">
+
+				<button id="calcular"> Calcular </button>
+			</div>
+		</div>
+		<div>
+			<div>
+				Distancia:<span id="distancia"></span>
+			</div>
+			<div>
+				Tempo:<span id="tempo"></span>
+			</div>
+			<div>
+				Valor: R$
+			</div>
+		</div>
+		<div style="display: flex;justify-content: center;">
+			<div id="map" style="width: 500px; height: 500px;border: #c6d9d2; border-style: groove;"></div>
+		</div>
+		<!--
             <ul class="icons major">
               <li>
                 <span class="icon solid fa-camera-retro"
@@ -98,81 +95,71 @@
                 >
               </li>
             </ul> -->
-    </section>
+	</section>
 
-    <!-- Two -->
-    <section id="two" class="wrapper">
-      <div class="inner alt">
-        <section class="spotlight">
-          <div class="image"><img src="images/transp-exec.jpeg" alt="" /></div>
-          <div class="content">
-            <h3>Transporte Executivo</h3>
-            <p>
-              Morbi mattis ornare ornare. Duis quam turpis, gravida at leo
-              elementum elit fusce accumsan dui libero, quis vehicula lectus
-              ultricies eu. In convallis amet leo non sapien iaculis efficitur
-              consequat lorem ipsum.
-            </p>
-          </div>
-        </section>
-        <section class="spotlight">
-          <div class="image"><img src="images/transp-bike.jpeg" alt="" /></div>
-          <div class="content">
-            <h3>Transporte de Objetos</h3>
-            <p>
-              Morbi mattis ornare ornare. Duis quam turpis, gravida at leo
-              elementum elit fusce accumsan dui libero, quis vehicula lectus
-              ultricies eu. In convallis amet leo non sapien iaculis efficitur
-              consequat lorem ipsum.
-            </p>
-          </div>
-        </section>
-        <section class="spotlight">
-          <div class="image"><img src="images/idoso.jpg" alt="" /></div>
-          <div class="content">
-            <h3>Transporte de Idosos</h3>
-            <p>
-              Morbi mattis ornare ornare. Duis quam turpis, gravida at leo
-              elementum elit fusce accumsan dui libero, quis vehicula lectus
-              ultricies eu. In convallis amet leo non sapien iaculis efficitur
-              consequat lorem ipsum.
-            </p>
-          </div>
-        </section>
-        <section class="special">
-          <ul class="icons labeled">
-            <li>
-              <span class="icon solid fa-camera-retro"
-                ><span class="label">Ipsum lorem accumsan</span></span
-              >
-            </li>
-            <li>
-              <span class="icon solid fa-sync"
-                ><span class="label">Sed vehicula elementum</span></span
-              >
-            </li>
-            <li>
-              <span class="icon solid fa-cloud"
-                ><span class="label">Elit fusce consequat</span></span
-              >
-            </li>
-            <li>
-              <span class="icon solid fa-code"
-                ><span class="label">Lorem nullam tempus</span></span
-              >
-            </li>
-            <li>
-              <span class="icon solid fa-desktop"
-                ><span class="label">Adipiscing amet sapien</span></span
-              >
-            </li>
-          </ul>
-        </section>
-      </div>
-    </section>
+	<!-- Two -->
+	<section id="two" class="wrapper">
+		<div class="inner alt">
+			<section class="spotlight">
+				<div class="image"><img src="images/transp-exec.jpeg" alt="" /></div>
+				<div class="content">
+					<h3>Transporte Executivo</h3>
+					<p>
+						Morbi mattis ornare ornare. Duis quam turpis, gravida at leo
+						elementum elit fusce accumsan dui libero, quis vehicula lectus
+						ultricies eu. In convallis amet leo non sapien iaculis efficitur
+						consequat lorem ipsum.
+					</p>
+				</div>
+			</section>
+			<section class="spotlight">
+				<div class="image"><img src="images/transp-bike.jpeg" alt="" /></div>
+				<div class="content">
+					<h3>Transporte de Objetos</h3>
+					<p>
+						Morbi mattis ornare ornare. Duis quam turpis, gravida at leo
+						elementum elit fusce accumsan dui libero, quis vehicula lectus
+						ultricies eu. In convallis amet leo non sapien iaculis efficitur
+						consequat lorem ipsum.
+					</p>
+				</div>
+			</section>
+			<section class="spotlight">
+				<div class="image"><img src="images/idoso.jpg" alt="" /></div>
+				<div class="content">
+					<h3>Transporte de Idosos</h3>
+					<p>
+						Morbi mattis ornare ornare. Duis quam turpis, gravida at leo
+						elementum elit fusce accumsan dui libero, quis vehicula lectus
+						ultricies eu. In convallis amet leo non sapien iaculis efficitur
+						consequat lorem ipsum.
+					</p>
+				</div>
+			</section>
+			<section class="special">
+				<ul class="icons labeled">
+					<li>
+						<span class="icon solid fa-camera-retro"><span class="label">Ipsum lorem accumsan</span></span>
+					</li>
+					<li>
+						<span class="icon solid fa-sync"><span class="label">Sed vehicula elementum</span></span>
+					</li>
+					<li>
+						<span class="icon solid fa-cloud"><span class="label">Elit fusce consequat</span></span>
+					</li>
+					<li>
+						<span class="icon solid fa-code"><span class="label">Lorem nullam tempus</span></span>
+					</li>
+					<li>
+						<span class="icon solid fa-desktop"><span class="label">Adipiscing amet sapien</span></span>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</section>
 
-    <!-- Four -->
-    <!--
+	<!-- Four -->
+	<!--
       			<section id="four" class="wrapper">
       				<div class="inner">
 
@@ -490,40 +477,34 @@
       			</section>
       		-->
 
-    <!-- Footer -->
-    <footer id="footer">
-      <ul class="icons">
-        <li>
-          <a href="#" class="icon brands fa-facebook-f"
-            ><span class="label">Facebook</span></a
-          >
-        </li>
-        <li>
-          <a href="#" class="icon brands fa-twitter"
-            ><span class="label">Twitter</span></a
-          >
-        </li>
-        <li>
-          <a href="#" class="icon brands fa-instagram"
-            ><span class="label">Instagram</span></a
-          >
-        </li>
-      </ul>
-      <p class="copyright">
-        &copy; Untitled. Credits: <a href="http://html5up.net">HTML5 UP</a>
-      </p>
-    </footer>
+	<!-- Footer -->
+	<footer id="footer">
+		<ul class="icons">
+			<li>
+				<a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a>
+			</li>
+			<li>
+				<a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a>
+			</li>
+			<li>
+				<a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a>
+			</li>
+		</ul>
+		<p class="copyright">
+			&copy; Untitled. Credits: <a href="http://html5up.net">HTML5 UP</a>
+		</p>
+	</footer>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgk0cNqtk8KI8UFWjb1x_wYGoIB01dhjw&callback=initialize&libraries=places&v=weekly"
-      async
-    ></script>
-  </body>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgk0cNqtk8KI8UFWjb1x_wYGoIB01dhjw&callback=initialize&libraries=places&v=weekly"
+		async></script>
+</body>
+
 </html>
