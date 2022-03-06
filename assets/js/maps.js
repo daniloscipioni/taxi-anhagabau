@@ -50,8 +50,15 @@ function initMap() {
     calculateAndDisplayRoute(directionsService, directionsRenderer);
   };
 
+  const getCurrentLocation1 = function () {
+    getCurrentLocation();
+  };
+
   const btn = document.getElementById("calcular")
   btn.addEventListener("click", onChangeHandler);
+
+  const btnCurrentLocation =  document.getElementById("currentLocation")
+  btnCurrentLocation.addEventListener("click", getCurrentLocation1);
 }
 
 
@@ -68,15 +75,65 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer) {
     })
     .then((response) => {
       directionsRenderer.setDirections(response);
-
+      
+      
       let result = calcValue(response.routes[0].legs[0].distance.value, response.routes[0].legs[0].duration.value);
 
       document.getElementById("distancia").innerHTML = response.routes[0].legs[0].distance.text
       document.getElementById("tempo").innerHTML = response.routes[0].legs[0].duration.text
       document.getElementById("valor").innerHTML = result
+
+      
     })
     .catch((e) => window.alert("Directions request failed due to " + status));
 }
+
+
+
+
+function getCurrentLocation() {
+
+  const geocoder = new google.maps.Geocoder();
+  const infowindow = new google.maps.InfoWindow();
+
+
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const pos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+        };
+        console.log(pos);
+        geocoder
+        .geocode({ location: pos })
+        .then((response) => {
+          if (response.results[0]) {
+        
+            document.getElementById("start").value = response.results[0].formatted_address;
+          
+          } else {
+            window.alert("No results found");
+          }
+        })
+        .catch((e) => window.alert("Geocoder failed due to: " + e));
+       
+
+      },
+      () => {
+        handleLocationError(true, infoWindow, map.getCenter());
+      }
+    );
+    
+  } else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, infoWindow, map.getCenter());
+  }
+
+
+}
+
+
 
 
 function calcValue(distance, duration){
@@ -94,3 +151,4 @@ function calcValue(distance, duration){
   return (bandeirada + distanceValue * bandeira + (durationValue / 3) * tempoPercurso).toFixed(2);
 
 }
+
