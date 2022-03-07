@@ -3613,7 +3613,7 @@ input, select, textarea {
 	#header {
 		background-color: #f7d927;
 		color: #9a9a5c;
-		padding: 4.5em 0 2.5em 0 ;
+		padding: 0 0 2.5em 0 ;
 		-moz-align-items: center;
 		-webkit-align-items: center;
 		-ms-align-items: center;
