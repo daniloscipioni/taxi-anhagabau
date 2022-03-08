@@ -3910,6 +3910,25 @@ input, select, textarea {
 			#header {
 				background-image: url("images/overlay.png"), url("images/pattern-size2.svg");
 			}
+			#header .car{
+				position: inherit; 
+				
+			}
+			#header .car img{
+				height: 40vh!important; 
+				
+			}
+			#header .map{
+				display: none;
+			}
+			#header .title-header{
+				text-align: center;
+				top: 0px;
+				position: absolute;
+				right: 0px
+			}
+
+
 
 		}
 
