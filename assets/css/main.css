@@ -3855,6 +3855,34 @@ input, select, textarea {
     		position: relative;
     		right: 390px
 		}
+		#header .information{
+			display: flex;
+			width: inherit;
+			text-align: center;
+			line-height: 50px;
+		}
+		#header .information .sim{
+			width: 50%;
+		}
+		#header .information .cel{
+			width: 50%;display: flex;
+		}
+		#header .information .cel .icon{
+			width: 60%;
+			text-align: right;
+		}
+		#header .information .cel .icon img{
+			width: 40px; 
+			height: 40px;
+			background-image: url('../../images/panel/icon-wats.svg');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			border-radius: 10px
+		}
+		#header .information .cel .number{
+			width: 40%;
+		}
 
 		#header .content {
 			-moz-transition: opacity 0.5s ease, -moz-transform 1s ease;
@@ -3915,9 +3943,40 @@ input, select, textarea {
 				
 			}
 			#header .car img{
-				height: 40vh!important; 
+				height: 35vh!important; 
 				
 			}
+
+			#header .information{
+				display: inherit;
+				
+			}
+			#header .information .sim{
+				 width: 100%; 
+			}
+			#header .information .cel{
+				display: inline-flex;
+				width: 100%; 
+			}
+			#header .information .cel .icon{
+				
+				text-align: right;
+			}
+			#header .information .cel .icon img{
+				width: 40px; 
+				height: 40px;
+				background-image: url('../../images/panel/icon-wats.svg');
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				border-radius: 10px
+			}
+			#header .information .cel .number{
+				width: 100%;
+				text-align: start;
+				padding-left: 20px;
+			}
+			
 			#header .map{
 				display: none;
 			}
