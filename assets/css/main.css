@@ -3839,6 +3839,23 @@ input, select, textarea {
 				display: inline;
 			}
 
+		#header .car{
+			position: absolute; 
+			top: 140px;
+		}
+		#header .map{
+			position: relative; 
+			right: 0px; 
+			left: 150px; 
+			top: 0px;
+		}
+
+		#header .title-header{
+			top: 65px;
+    		position: relative;
+    		right: 390px
+		}
+
 		#header .content {
 			-moz-transition: opacity 0.5s ease, -moz-transform 1s ease;
 			-webkit-transition: opacity 0.5s ease, -webkit-transform 1s ease;
@@ -3944,6 +3961,20 @@ input, select, textarea {
 			#header {
 				background-image: url("images/overlay.png"), url("images/pattern-size3.svg");
 			}
+			#header .car{
+				position: inherit; 
+				
+			}
+			#header .map{
+				display: none;
+			}
+			#header .title-header{
+				text-align: center;
+				top: 0px;
+				position: absolute;
+				right: 0px
+			}
+
 
 				#header h1 {
 					font-size: 2em;
@@ -3961,6 +3992,21 @@ input, select, textarea {
 			#header {
 				padding: 2em 2em 0.1em 2em ;
 			}
+
+			#header .title-header{
+				text-align: center;
+				top: 0px;
+				position: absolute;
+				right: 0px
+			}
+
+			#header .car{
+				position: inherit; 
+			}
+			#header .map{
+				display: none;
+			}
+	
 
 				#header .content {
 					margin: 0 2em 2em 0;
@@ -3984,6 +4030,19 @@ input, select, textarea {
 				padding: 3em 1.5em 1em 1.5em ;
 			}
 
+			#header .title-header{
+				text-align: center;
+				top: 0px;
+				position: absolute;
+				right: 0px
+			}
+
+			#header .car{
+				position: inherit; 
+			}
+			#header .map{
+				display: none;
+			}
 				#header .image {
 					font-size: 0.6em;
 					max-width: 60vw;
