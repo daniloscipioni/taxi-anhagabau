@@ -35,6 +35,10 @@ body {
 ol, ul {
 	list-style: none;
 }
+@font-face {
+	font-family:"gothan";
+	src: url("../font/Gotham-Font/GothamBold.ttf") format("truetype");
+  }
 
 blockquote, q {
 	quotes: none;
@@ -3840,8 +3844,14 @@ input, select, textarea {
 			}
 
 		#header .car{
-			position: absolute; 
-			top: 140px;
+			position: absolute;
+			top: 175px;
+			left: -100px;
+		}
+		#header .car img{
+			height: 60vh; 
+			min-height: 20em; 
+			/* padding: 1.5em 0 2.5em 0; */
 		}
 		#header .map{
 			position: relative; 
@@ -3850,22 +3860,31 @@ input, select, textarea {
 			top: 0px;
 		}
 
+		#header .map img{
+			min-height: 30em;
+			padding: 1.5em 0 2.5em 0;
+		}
+
 		#header .title-header{
-			top: 65px;
+			top: 100px;
     		position: relative;
-    		right: 390px
+    		right: 590px;
+			font-family: gothan;
+			font-size: larger;
 		}
 		#header .information{
 			display: flex;
 			width: inherit;
 			text-align: center;
 			line-height: 50px;
+			font-family: gothan;
 		}
 		#header .information .sim{
 			width: 50%;
 		}
 		#header .information .cel{
-			width: 50%;display: flex;
+			width: 50%;
+			display: flex;
 		}
 		#header .information .cel .icon{
 			width: 60%;
@@ -3881,7 +3900,7 @@ input, select, textarea {
 			border-radius: 10px
 		}
 		#header .information .cel .number{
-			width: 40%;
+			width: 50%;
 		}
 
 		#header .content {
@@ -3957,6 +3976,7 @@ input, select, textarea {
 			#header .information .cel{
 				display: inline-flex;
 				width: 100%; 
+				margin-top: 25px
 			}
 			#header .information .cel .icon{
 				
@@ -3983,8 +4003,8 @@ input, select, textarea {
 			#header .title-header{
 				text-align: center;
 				top: 0px;
-				position: absolute;
-				right: 0px
+				right: 0px;
+				font-family: gothan;
 			}
 
 
@@ -4050,7 +4070,8 @@ input, select, textarea {
 				text-align: center;
 				top: 0px;
 				position: absolute;
-				right: 0px
+				right: 0px;
+				font-family: gothan;
 			}
 
 
