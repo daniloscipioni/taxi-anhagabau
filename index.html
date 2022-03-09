@@ -99,7 +99,8 @@
           name="origem"
           placeholder="Origem"
         />
-<div style="margin-top: 10px;margin-bottom: 10px;"></div>
+		<small id="valida-start" style="display: none;color: red;font-size: small;">*campo obrigatório</small>
+		<div style="margin-top: 10px;margin-bottom: 10px;"></div>
         <label for="destino">Destino</label>
         <input
           id="end"
@@ -108,24 +109,27 @@
           name="destino"
           placeholder="Destino"
         />
+		<small id="valida-end" style="display: none;color: red;font-size: small;">*campo obrigatório</small>
         <div style="padding-top: 10px">
-          <button id="calcular">Calcular</button>
+          <button id="calcular" style="width: 90px;padding: 0;">Calcular
+		</button>
+	
         </div>
       </div>
+<div>
+	<img src="./images/spin.svg" style="width: 40px;height: 40px;display: none;position: relative;" id="loading" alt="">
 
-
-     
+</div>
 <div style="display: flex;margin-top: 10px;margin-bottom: 10px;">
-
   <div style="width: 50%;text-align: end;margin-right: 10px;" >
     <div>Distancia:</div>
     <div>Tempo:</div>
-    <div style="margin-top: 5px;">Valor: R$</div>
+    <div style="margin-top: 5px;">Valor aproximado:</div>
   </div>
   <div style="width: 50%;text-align: start;margin-left: 10px;">
     <div id="distancia"></div>
     <div id="tempo"></div>
-    <div id="valor" style="font-size: x-large;margin-top: 5px;"></div>
+    <div id="valor" style="font-size: x-large;margin-top: 5px;color: #008000b0; font-weight: bold;"></div>
   </div>
 </div>
       <div style="display: flex; justify-content: center">

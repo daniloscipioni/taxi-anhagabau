@@ -47,8 +47,22 @@ function initMap() {
   directionsRenderer.setMap(map);
 
   const onChangeHandler = function () {
-    console.log(validaCampos());
-    calculateAndDisplayRoute(directionsService, directionsRenderer);
+
+    let valida = validaCampos();
+    $("#valida-start").css("display", "none");
+    $("#valida-end").css("display", "none");
+    if(!valida.validaStart){
+     $("#valida-start").css("display", "block");
+    }
+    
+    if(!valida.validaEnd){
+    $("#valida-end").css("display", "block");
+    }
+    if(valida.validaStart && valida.validaEnd ){
+      $("#loading").css("display", "inline");
+      calculateAndDisplayRoute(directionsService, directionsRenderer);
+    }
+  
   };
 
   const getCurrentLocation1 = function () {
@@ -76,14 +90,16 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer) {
     })
     .then((response) => {
       directionsRenderer.setDirections(response);
+      setTimeout(() => {
+        $("#loading").css("display", "none");
       
       
       let result = calcValue(response.routes[0].legs[0].distance.value, response.routes[0].legs[0].duration.value);
 
       document.getElementById("distancia").innerHTML = response.routes[0].legs[0].distance.text
       document.getElementById("tempo").innerHTML = response.routes[0].legs[0].duration.text
-      document.getElementById("valor").innerHTML = result
-
+      document.getElementById("valor").innerHTML = "R$ " + result.replace('.',',')
+    }, 1000);
       
     })
     .catch((e) => window.alert("Falha na requisição " + e));
@@ -105,7 +121,7 @@ function getCurrentLocation() {
           lat: position.coords.latitude,
           lng: position.coords.longitude,
         };
-        console.log(pos);
+       
         geocoder
         .geocode({ location: pos })
         .then((response) => {
