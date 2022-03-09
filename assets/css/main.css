@@ -3972,6 +3972,7 @@ input, select, textarea {
 			}
 			#header .information .sim{
 				 width: 100%; 
+				 padding: 10px;
 			}
 			#header .information .cel{
 				display: inline-flex;
