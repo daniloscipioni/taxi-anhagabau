@@ -5,42 +5,40 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-  <head>
-    <title>Taxi Jundiai Anhangabaú</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="icon" href="./images/panel/Taxi.svg" type="image/icon type" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <noscript>
-      <link rel="stylesheet" href="assets/css/noscript.css" />
-    </noscript>
-    <script src="./assets/js/maps.js"></script>
-  </head>
+<head>
+	<title>Taxi Jundiai Anhangabaú</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="icon" href="./images/panel/Taxi.svg" type="image/icon type" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <body class="is-preload">
-    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+	<script src="./assets/js/maps.js"></script>
+</head>
 
-    <!-- Header -->
-    <header id="header">
-      <div class="content">
-        <div class="title-header">
-          TAXI JUNDIAI ANHANGABAÚ
-        </div>
-      <div class="map">
-        <img src="images/panel/fundo.svg" alt="" />
-      </div>
-      <div class="car" >
-        <img src="images/panel/Taxi.svg"   />
-      </div>
-        <!-- <div>
+<body class="is-preload">
+	<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+
+	<!-- Header -->
+	<header id="header">
+		<div class="content">
+			<div class="title-header">
+				TAXI JUNDIAI ANHANGABAÚ
+			</div>
+			<div class="map">
+				<img src="images/panel/fundo.svg" alt="" />
+			</div>
+			<div class="car">
+				<img src="images/panel/Taxi.svg" />
+			</div>
+			<!-- <div>
 
         </div> -->
-        <!-- <h1><a href="#">Taxi Jundiaí Anhangabaú</a></h1>
+			<!-- <h1><a href="#">Taxi Jundiaí Anhangabaú</a></h1>
         <div><img src="images/taxi-main.png" alt="desenho de taxi" /></div>
         <p>
           Viaje com segurança!<br />
@@ -83,152 +81,140 @@
       <!-- <div class="image phone">
         <div class="inner"><img src="images/screen.jpg" alt="" /></div>
       </div> -->
-     
-    </header>
 
-    <!-- One -->
-    <section id="one" class="wrapper style2 special">
-      <header class="major">
-        <h2>Simulação de valores</h2>
-      </header>
-	 
-	  <div>
-		<input type="radio" id="band1" name="band" value="band1"
-			   checked>
-		<label for="band1">Bandeira 1 (06:00 ás 20:00)</label>
-	  </div>
-	  
-	  <div>
-		<input type="radio" id="band2" name="band" value="band2">
-		<label for="band2">Bandeira 2 (20:00 ás 06:00)</label>
-	  </div>
-<!-- 	  
+	</header>
+
+	<!-- One -->
+	<section id="one" class="wrapper style2 special">
+		<header class="major">
+			<h2>Simulação de valores</h2>
+		</header>
+
+		<div>
+			<input type="radio" id="band1" name="band" value="band1" checked>
+			<label for="band1">Bandeira 1 (06:00 ás 20:00)</label>
+		</div>
+
+		<div>
+			<input type="radio" id="band2" name="band" value="band2">
+			<label for="band2">Bandeira 2 (20:00 ás 06:00)</label>
+		</div>
+		<!-- 	  
     <button id="currentLocation"  aria-hidden="true" class="fa fa-map-marker fa-lg" >
        Local atual
     </button> -->
-<div style="margin-top: 10px;margin-bottom: 15px;">
+		<div style="margin-top: 10px;margin-bottom: 15px;">
 
-  <a class="btn btn-default btn-sm" style="cursor: pointer;text-decoration: none;" id="currentLocation">
-    <i class="fa fa-map-marker"></i> Minha localização
-  </a>
-</div>
-	  
-      <div>
-        <label for="origem">Origem</label>
-        <input
-          type="text"
-          id="start"
-          class="controls"
-          name="origem"
-          placeholder="Origem"
-        />
-<div style="margin-top: 10px;margin-bottom: 10px;"></div>
-        <label for="destino">Destino</label>
-        <input
-          id="end"
-          class="controls"
-          type="text"
-          name="destino"
-          placeholder="Destino"
-        />
-        <div style="padding-top: 10px">
-          <button id="calcular">Calcular</button>
-        </div>
-      </div>
+			<a class="btn btn-default btn-sm" style="cursor: pointer;text-decoration: none;" id="currentLocation">
+				<i class="fa fa-map-marker"></i> Minha localização
+			</a>
+		</div>
 
+		<div>
+			<label for="origem">Origem</label>
+			<input type="text" id="start" class="controls" name="origem" placeholder="Origem" />
+			<small id="valida-start" style="display: none;color: red;font-size: small;">*campo obrigatório</small>
+			<div style="margin-top: 10px;margin-bottom: 10px;"></div>
+			<label for="destino">Destino</label>
+			<input id="end" class="controls" type="text" name="destino" placeholder="Destino" />
+			<small id="valida-end" style="display: none;color: red;font-size: small;">*campo obrigatório</small>
+			<div style="padding-top: 10px">
+				<button id="calcular" style="width: 90px;padding: 0;">Calcular
+				</button>
 
-     
-<div style="display: flex;margin-top: 10px;margin-bottom: 10px;">
+			</div>
+		</div>
+		<div>
+			<img src="./images/spin.svg" style="width: 40px;height: 40px;display: none;position: relative;" id="loading"
+				alt="">
 
-  <div style="width: 50%;text-align: end;margin-right: 10px;" >
-    <div>Distancia:</div>
-    <div>Tempo:</div>
-    <div style="margin-top: 5px;">Valor: R$</div>
-  </div>
-  <div style="width: 50%;text-align: start;margin-left: 10px;">
-    <div id="distancia"></div>
-    <div id="tempo"></div>
-    <div id="valor" style="font-size: x-large;margin-top: 5px;"></div>
-  </div>
-</div>
-      <div style="display: flex; justify-content: center">
-        <div
-          id="map"
-          style="
+		</div>
+		<div style="display: flex;margin-top: 10px;margin-bottom: 10px;">
+			<div style="width: 50%;text-align: end;margin-right: 10px;">
+				<div>Distancia:</div>
+				<div>Tempo:</div>
+				<div style="margin-top: 5px;">Valor aproximado:</div>
+			</div>
+			<div style="width: 50%;text-align: start;margin-left: 10px;">
+				<div id="distancia"></div>
+				<div id="tempo"></div>
+				<div id="valor" style="font-size: x-large;margin-top: 5px;color: #008000b0; font-weight: bold;"></div>
+			</div>
+		</div>
+		<div style="display: flex; justify-content: center">
+			<div id="map" style="
             width: 500px;
             height: 500px;
             border: #c6d9d2;
             border-style: groove;
-          "
-        ></div>
-      </div>
-    </section>
+          "></div>
+		</div>
+	</section>
 
-    <!-- Two -->
-    <section id="two" class="wrapper">
-      <div class="inner alt">
-        <section class="spotlight">
-          <div class="image"><img src="images/transp-exec.jpeg" alt="" /></div>
-          <div class="content">
-            <h3>Transporte Executivo</h3>
-            <p>
-              Serviço especializado para realização de trajetos que necessitem de pontualidade como aeroporto, reuniões, entre outros, evitando atrasos indesejados.
-            </p>
-          </div>
-        </section>
-        <section class="spotlight">
-          <div class="image"><img src="images/idoso.jpg" alt="" /></div>
-          <div class="content">
-            <h3>Transporte de Idosos</h3>
-            <p>
-             Serviço oferecido para idosos que priorizam segurança ou que necessitem de atenção especial devido a ausência de mobilidade.
-            </p>
-          </div>
-        </section>
-        <section class="spotlight">
-          <div class="image"><img src="images/transp-bike.jpeg" alt="" /></div>
-          <div class="content">
-            <h3>Transporte de Objetos</h3>
-            <p>
-              Serviço exclusivo para transporte de objetos oferecendo a segurança da entrega de pacotes e outros, ou até mesmo aproveitar o seu trajeto para levar sua bicicleta.
-            </p>
-          </div>
-        </section>
-        <!-- <section class="special">
-          <ul class="icons labeled">
-            <li>
-              <span class="icon solid fa-camera-retro"
-                ><span class="label">Ipsum lorem accumsan</span></span
-              >
-            </li>
-            <li>
-              <span class="icon solid fa-sync"
-                ><span class="label">Sed vehicula elementum</span></span
-              >
-            </li>
-            <li>
-              <span class="icon solid fa-cloud"
-                ><span class="label">Elit fusce consequat</span></span
-              >
-            </li>
-            <li>
-              <span class="icon solid fa-code"
-                ><span class="label">Lorem nullam tempus</span></span
-              >
-            </li>
-            <li>
-              <span class="icon solid fa-desktop"
-                ><span class="label">Adipiscing amet sapien</span></span
-              >
-            </li>
-          </ul>
-        </section> -->
-      </div>
-    </section>
+	<!-- Two -->
+	<section id="two" class="wrapper">
+		<div class="inner alt">
+			<section class="spotlight">
+				<div class="image"><img src="images/transp-exec.jpeg" alt="" /></div>
+				<div class="content">
+					<h3>Transporte Executivo</h3>
+					<p>
+						Serviço especializado para realização de trajetos que necessitem de pontualidade como aeroporto,
+						reuniões, entre outros, evitando atrasos indesejados.
+					</p>
+				</div>
+			</section>
+			<section class="spotlight">
+				<div class="image"><img src="images/idoso.jpg" alt="" /></div>
+				<div class="content">
+					<h3>Transporte de Idosos</h3>
+					<p>
+						Serviço oferecido para idosos que priorizam segurança ou que necessitem de atenção especial
+						devido a ausência de mobilidade.
+					</p>
+				</div>
+			</section>
+			<section class="spotlight">
+				<div class="image"><img src="images/transp-bike.jpeg" alt="" /></div>
+				<div class="content">
+					<h3>Transporte de Objetos</h3>
+					<p>
+						Serviço exclusivo para transporte de objetos oferecendo a segurança da entrega de pacotes e
+						outros, ou até mesmo aproveitar o seu trajeto para levar sua bicicleta.
+					</p>
+				</div>
+			</section>
+			<section style="text-align: center;">
+				<!-- <div class="image"><img src="images/transp-bike.jpeg" alt="" /></div> -->
+				<div class="content">
+					<h3>Formas de pagamento</h3>
+					<p>
+					<section class="special">
+						<ul style="list-style: none;">
+							<li>
+								<!-- <span class="icon solid fa-credit-card"> -->
+								<span class="label">Débido e Crédito</span>
+								<!-- </span> -->
+							</li>
+							<li>
+								<span class="label">PIX</span>
+							</li>
+							<li>
+								<span class="label">Wappa</span>
+							</li>
 
-    <!-- Footer -->
-    <footer id="footer">
-      <!-- <ul class="icons">
+						</ul>
+					</section>
+					</p>
+				</div>
+			</section>
+
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<!-- <ul class="icons">
         <li>
           <a href="#" class="icon brands fa-facebook-f"
             ><span class="label">Facebook</span></a
@@ -245,22 +231,22 @@
           >
         </li>
       </ul> -->
-      <p class="copyright">
-        &copy; Danilo Scipioni. Credits: HTML5 UP
-      </p>
-    </footer>
+		<p class="copyright">
+			&copy; Danilo Scipioni. Credits: HTML5 UP
+		</p>
+	</footer>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgk0cNqtk8KI8UFWjb1x_wYGoIB01dhjw&callback=initialize&libraries=places&v=weekly"
-      async
-    ></script>
-  </body>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgk0cNqtk8KI8UFWjb1x_wYGoIB01dhjw&callback=initialize&libraries=places&v=weekly"
+		async></script>
+</body>
+
 </html>
-  </style>
+</style>
