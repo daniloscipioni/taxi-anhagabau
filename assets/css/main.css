@@ -4006,6 +4006,7 @@ input, select, textarea {
 				top: 0px;
 				right: 0px;
 				font-family: gothan;
+				display: contents;
 			}
 
 
