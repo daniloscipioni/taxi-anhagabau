@@ -3876,7 +3876,7 @@ input, select, textarea {
 			display: flex;
 			width: inherit;
 			text-align: center;
-			line-height: 100px;
+			/* line-height: 100px; */
 			font-family: gothan;
 		}
 		#header .information .sim{
