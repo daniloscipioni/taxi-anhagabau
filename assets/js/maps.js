@@ -85,7 +85,7 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer) {
 
       
     })
-    .catch((e) => window.alert("Directions request failed due to " + status));
+    .catch((e) => window.alert("Falha na requisição " + e));
 }
 
 

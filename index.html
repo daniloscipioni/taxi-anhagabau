@@ -79,10 +79,16 @@
 		<input type="radio" id="band2" name="band" value="band2">
 		<label for="band2">Bandeira 2 (20:00 ás 06:00)</label>
 	  </div>
-	  
-    <button id="currentLocation"  class="fa fa-map-marker" >
+<!-- 	  
+    <button id="currentLocation"  aria-hidden="true" class="fa fa-map-marker fa-lg" >
        Local atual
-    </button>
+    </button> -->
+<div style="margin-top: 10px;margin-bottom: 15px;">
+
+  <a class="btn btn-default btn-sm" style="cursor: pointer;text-decoration: none;" id="currentLocation">
+    <i class="fa fa-map-marker"></i> Minha localização
+  </a>
+</div>
 	  
       <div>
         <label for="origem">Origem</label>
@@ -93,7 +99,7 @@
           name="origem"
           placeholder="Origem"
         />
-
+<div style="margin-top: 10px;margin-bottom: 10px;"></div>
         <label for="destino">Destino</label>
         <input
           id="end"
@@ -107,11 +113,21 @@
         </div>
       </div>
 
-      <div>
-        <div>Distancia:<span id="distancia"></span></div>
-        <div>Tempo:<span id="tempo"></span></div>
-        <div>Valor: R$ <span id="valor"></span></div>
-      </div>
+
+     
+<div style="display: flex;margin-top: 10px;margin-bottom: 10px;">
+
+  <div style="width: 50%;text-align: end;margin-right: 10px;" >
+    <div>Distancia:</div>
+    <div>Tempo:</div>
+    <div style="margin-top: 5px;">Valor: R$</div>
+  </div>
+  <div style="width: 50%;text-align: start;margin-left: 10px;">
+    <div id="distancia"></div>
+    <div id="tempo"></div>
+    <div id="valor" style="font-size: x-large;margin-top: 5px;"></div>
+  </div>
+</div>
       <div style="display: flex; justify-content: center">
         <div
           id="map"
