@@ -47,6 +47,7 @@ function initMap() {
   directionsRenderer.setMap(map);
 
   const onChangeHandler = function () {
+    console.log(validaCampos());
     calculateAndDisplayRoute(directionsService, directionsRenderer);
   };
 
@@ -152,3 +153,17 @@ function calcValue(distance, duration){
 
 }
 
+function validaCampos() {
+  let validaStart = true;
+  let validaEnd = true;
+
+  if ($('#start').val() == '') {  
+    validaStart = false;  
+  }
+
+  if ($('#end').val() == '') { 
+    validaEnd = false;
+  }
+
+  return {validaStart:validaStart, validaEnd:validaEnd};
+}
