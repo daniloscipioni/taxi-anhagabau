@@ -13,4 +13,4 @@ jobs:
       with:
         server: ftp.taxijundiaianhangabau.com.br
         username: taxijundiaianhan1
-        password: ${{ secrets.FTP_PASSWORD }}
+        password: Contemp091289
