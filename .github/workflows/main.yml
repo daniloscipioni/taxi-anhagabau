@@ -12,5 +12,6 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
         server: ftp.taxijundiaianhangabau.com.br
+        server-dir: public_html/
         username: taxijundiaianhan1
         password: ${{ secrets.ftp_password }}
