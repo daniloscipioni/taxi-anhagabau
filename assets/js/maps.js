@@ -160,8 +160,8 @@ function calcValue(distance, duration){
   let durationValue = duration / 3600;
   let bandeirada = parseFloat("5.50");
   let tempoPercurso = parseFloat("30.00");
-  let km_band1 = parseFloat("3.50");
-  let km_band2 = parseFloat("4.20");
+  let km_band1 = parseFloat("4.20");
+  let km_band2 = parseFloat("5.04");
 
   var bandeira = $('input[name=band]:checked').val() == "band1" ? km_band1 : km_band2
 
